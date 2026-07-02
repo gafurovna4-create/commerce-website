@@ -12,7 +12,7 @@ const Navbar = () => {
   const [wishlistCount, setWishlistCount] = useState(0);
   const [carCount, setCartCount] = useState(0);
   return (
-
+     <>
     <div className="flex container max-w-6xl mx-auto justify-between items-start pt-10">
       <h1 className="text-2xl font-bold text-black">Exclusive</h1>
         <div className="flex gap-10 items-start text-black">
@@ -28,7 +28,7 @@ const Navbar = () => {
               <Search size={16} />
               </button>
             </div>
-              <button oncCick={() => setWishlistCount(wishlistCount + 1)} className="relative">
+              <button onClick={() => setWishlistCount(wishlistCount + 1)} className="relative">
               <Heart size={30} />
               {wishlistCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-4 h-4 
@@ -45,8 +45,10 @@ const Navbar = () => {
               </button>
           </div>
     </div>
-  )  
+      <div className='w-[1,440px] bg-[#B3B3B3] p-px mt-4'></div>
+    </>
+  )   
 }
 
 
-export default Navbar                                           
+export default Navbar                                          

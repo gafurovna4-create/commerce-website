@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Sidebar from '../components/Sidebar';
+import Hero from '../components/Hero';
 
-function Home () {
+function Home() {
     return (
-        <div>
-            <h1>Home Page</h1>
+        <div className="container max-w-6xl mx-auto flex gap-10">
+            <Sidebar />
+            <Hero />
         </div>
-    )
+    );
 }
 
-export default Home
+export default Home;
